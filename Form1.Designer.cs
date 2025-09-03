@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbgeriyedonuk = new System.Windows.Forms.RadioButton();
-            this.rbileriyonlu = new System.Windows.Forms.RadioButton();
+            this.rbBackWard = new System.Windows.Forms.RadioButton();
+            this.rbForward = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rb2022 = new System.Windows.Forms.RadioButton();
             this.rb2023 = new System.Windows.Forms.RadioButton();
@@ -39,30 +39,30 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtexclusive = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.totalAmountTextBox = new System.Windows.Forms.TextBox();
+            this.txtTotalAmount = new System.Windows.Forms.TextBox();
             this.txtVAT = new System.Windows.Forms.TextBox();
             this.txtamountBeforeVat = new System.Windows.Forms.TextBox();
             this.txtNhil = new System.Windows.Forms.TextBox();
             this.txtCovidLevy = new System.Windows.Forms.TextBox();
             this.txtGetFundLevy = new System.Windows.Forms.TextBox();
             this.txtTlLevy = new System.Windows.Forms.TextBox();
-            this.principalAmountTextBox = new System.Windows.Forms.TextBox();
-            this.totalAmountLabel = new System.Windows.Forms.Label();
-            this.lblKdv = new System.Windows.Forms.Label();
+            this.txtBaseAmount = new System.Windows.Forms.TextBox();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
+            this.lblVAT = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblNhil = new System.Windows.Forms.Label();
             this.lblCovid = new System.Windows.Forms.Label();
             this.lblGetFund = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.principalAmountLabel = new System.Windows.Forms.Label();
+            this.lblgiristuru = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rbgeriyedonuk);
-            this.groupBox2.Controls.Add(this.rbileriyonlu);
+            this.groupBox2.Controls.Add(this.rbBackWard);
+            this.groupBox2.Controls.Add(this.rbForward);
             this.groupBox2.Location = new System.Drawing.Point(18, 256);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 116);
@@ -70,28 +70,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Calculation Direction";
             // 
-            // rbgeriyedonuk
+            // rbBackWard
             // 
-            this.rbgeriyedonuk.AutoSize = true;
-            this.rbgeriyedonuk.Location = new System.Drawing.Point(6, 66);
-            this.rbgeriyedonuk.Name = "rbgeriyedonuk";
-            this.rbgeriyedonuk.Size = new System.Drawing.Size(184, 17);
-            this.rbgeriyedonuk.TabIndex = 2;
-            this.rbgeriyedonuk.Text = "From Grand Total to Main Amount";
-            this.rbgeriyedonuk.UseVisualStyleBackColor = true;
+            this.rbBackWard.AutoSize = true;
+            this.rbBackWard.Location = new System.Drawing.Point(6, 66);
+            this.rbBackWard.Name = "rbBackWard";
+            this.rbBackWard.Size = new System.Drawing.Size(184, 17);
+            this.rbBackWard.TabIndex = 2;
+            this.rbBackWard.Text = "From Grand Total to Main Amount";
+            this.rbBackWard.UseVisualStyleBackColor = true;
+            this.rbBackWard.CheckedChanged += new System.EventHandler(this.rbBackWard_CheckedChanged_1);
             // 
-            // rbileriyonlu
+            // rbForward
             // 
-            this.rbileriyonlu.AutoSize = true;
-            this.rbileriyonlu.Checked = true;
-            this.rbileriyonlu.Location = new System.Drawing.Point(6, 40);
-            this.rbileriyonlu.Name = "rbileriyonlu";
-            this.rbileriyonlu.Size = new System.Drawing.Size(184, 17);
-            this.rbileriyonlu.TabIndex = 1;
-            this.rbileriyonlu.TabStop = true;
-            this.rbileriyonlu.Text = "From Main Amount to Grand Total";
-            this.rbileriyonlu.UseVisualStyleBackColor = true;
-            this.rbileriyonlu.CheckedChanged += new System.EventHandler(this.rbileriyonlu_CheckedChanged);
+            this.rbForward.AutoSize = true;
+            this.rbForward.Checked = true;
+            this.rbForward.Location = new System.Drawing.Point(6, 40);
+            this.rbForward.Name = "rbForward";
+            this.rbForward.Size = new System.Drawing.Size(184, 17);
+            this.rbForward.TabIndex = 1;
+            this.rbForward.TabStop = true;
+            this.rbForward.Text = "From Main Amount to Grand Total";
+            this.rbForward.UseVisualStyleBackColor = true;
+            this.rbForward.CheckedChanged += new System.EventHandler(this.Rbforward_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -113,6 +114,7 @@
             this.rb2022.TabIndex = 1;
             this.rb2022.Text = "NORMAL-2022";
             this.rb2022.UseVisualStyleBackColor = true;
+            this.rb2022.CheckedChanged += new System.EventHandler(this.Yearselectionchange);
             // 
             // rb2023
             // 
@@ -125,6 +127,7 @@
             this.rb2023.TabStop = true;
             this.rb2023.Text = "NORMAL-2023";
             this.rb2023.UseVisualStyleBackColor = true;
+            this.rb2023.CheckedChanged += new System.EventHandler(this.Yearselectionchange);
             // 
             // txtinclusive
             // 
@@ -166,13 +169,14 @@
             this.btnCalculate.TabIndex = 40;
             this.btnCalculate.Text = "CALCULATE";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // totalAmountTextBox
+            // txtTotalAmount
             // 
-            this.totalAmountTextBox.Location = new System.Drawing.Point(487, 297);
-            this.totalAmountTextBox.Name = "totalAmountTextBox";
-            this.totalAmountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.totalAmountTextBox.TabIndex = 39;
+            this.txtTotalAmount.Location = new System.Drawing.Point(487, 297);
+            this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalAmount.TabIndex = 39;
             // 
             // txtVAT
             // 
@@ -216,30 +220,31 @@
             this.txtTlLevy.Size = new System.Drawing.Size(100, 20);
             this.txtTlLevy.TabIndex = 33;
             // 
-            // principalAmountTextBox
+            // txtBaseAmount
             // 
-            this.principalAmountTextBox.Location = new System.Drawing.Point(282, 250);
-            this.principalAmountTextBox.Name = "principalAmountTextBox";
-            this.principalAmountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.principalAmountTextBox.TabIndex = 32;
+            this.txtBaseAmount.Location = new System.Drawing.Point(282, 251);
+            this.txtBaseAmount.Name = "txtBaseAmount";
+            this.txtBaseAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtBaseAmount.TabIndex = 32;
+            this.txtBaseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBaseAmount_keypress);
             // 
-            // totalAmountLabel
+            // lblTotalAmount
             // 
-            this.totalAmountLabel.AutoSize = true;
-            this.totalAmountLabel.Location = new System.Drawing.Point(484, 281);
-            this.totalAmountLabel.Name = "totalAmountLabel";
-            this.totalAmountLabel.Size = new System.Drawing.Size(70, 13);
-            this.totalAmountLabel.TabIndex = 31;
-            this.totalAmountLabel.Text = "Total Amount";
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Location = new System.Drawing.Point(484, 281);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(70, 13);
+            this.lblTotalAmount.TabIndex = 31;
+            this.lblTotalAmount.Text = "Total Amount";
             // 
-            // lblKdv
+            // lblVAT
             // 
-            this.lblKdv.AutoSize = true;
-            this.lblKdv.Location = new System.Drawing.Point(590, 230);
-            this.lblKdv.Name = "lblKdv";
-            this.lblKdv.Size = new System.Drawing.Size(60, 13);
-            this.lblKdv.TabIndex = 30;
-            this.lblKdv.Text = "VAT (%15):";
+            this.lblVAT.AutoSize = true;
+            this.lblVAT.Location = new System.Drawing.Point(590, 230);
+            this.lblVAT.Name = "lblVAT";
+            this.lblVAT.Size = new System.Drawing.Size(60, 13);
+            this.lblVAT.TabIndex = 30;
+            this.lblVAT.Text = "VAT (%15):";
             // 
             // label6
             // 
@@ -286,14 +291,14 @@
             this.label2.TabIndex = 25;
             this.label2.Text = " tlLevy (%1)";
             // 
-            // principalAmountLabel
+            // lblgiristuru
             // 
-            this.principalAmountLabel.AutoSize = true;
-            this.principalAmountLabel.Location = new System.Drawing.Point(279, 220);
-            this.principalAmountLabel.Name = "principalAmountLabel";
-            this.principalAmountLabel.Size = new System.Drawing.Size(149, 13);
-            this.principalAmountLabel.TabIndex = 24;
-            this.principalAmountLabel.Text = "BaseAmount (excluding taxes)";
+            this.lblgiristuru.AutoSize = true;
+            this.lblgiristuru.Location = new System.Drawing.Point(279, 220);
+            this.lblgiristuru.Name = "lblgiristuru";
+            this.lblgiristuru.Size = new System.Drawing.Size(149, 13);
+            this.lblgiristuru.TabIndex = 24;
+            this.lblgiristuru.Text = "BaseAmount (excluding taxes)";
             // 
             // Form1
             // 
@@ -307,22 +312,22 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtexclusive);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.totalAmountTextBox);
+            this.Controls.Add(this.txtTotalAmount);
             this.Controls.Add(this.txtVAT);
             this.Controls.Add(this.txtamountBeforeVat);
             this.Controls.Add(this.txtNhil);
             this.Controls.Add(this.txtCovidLevy);
             this.Controls.Add(this.txtGetFundLevy);
             this.Controls.Add(this.txtTlLevy);
-            this.Controls.Add(this.principalAmountTextBox);
-            this.Controls.Add(this.totalAmountLabel);
-            this.Controls.Add(this.lblKdv);
+            this.Controls.Add(this.txtBaseAmount);
+            this.Controls.Add(this.lblTotalAmount);
+            this.Controls.Add(this.lblVAT);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNhil);
             this.Controls.Add(this.lblCovid);
             this.Controls.Add(this.lblGetFund);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.principalAmountLabel);
+            this.Controls.Add(this.lblgiristuru);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox2.ResumeLayout(false);
@@ -337,8 +342,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rbgeriyedonuk;
-        private System.Windows.Forms.RadioButton rbileriyonlu;
+        private System.Windows.Forms.RadioButton rbBackWard;
+        private System.Windows.Forms.RadioButton rbForward;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rb2022;
         private System.Windows.Forms.RadioButton rb2023;
@@ -347,22 +352,22 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtexclusive;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.TextBox totalAmountTextBox;
+        private System.Windows.Forms.TextBox txtTotalAmount;
         private System.Windows.Forms.TextBox txtVAT;
         private System.Windows.Forms.TextBox txtamountBeforeVat;
         private System.Windows.Forms.TextBox txtNhil;
         private System.Windows.Forms.TextBox txtCovidLevy;
         private System.Windows.Forms.TextBox txtGetFundLevy;
         private System.Windows.Forms.TextBox txtTlLevy;
-        private System.Windows.Forms.TextBox principalAmountTextBox;
-        private System.Windows.Forms.Label totalAmountLabel;
-        private System.Windows.Forms.Label lblKdv;
+        private System.Windows.Forms.TextBox txtBaseAmount;
+        private System.Windows.Forms.Label lblTotalAmount;
+        private System.Windows.Forms.Label lblVAT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNhil;
         private System.Windows.Forms.Label lblCovid;
         private System.Windows.Forms.Label lblGetFund;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label principalAmountLabel;
+        private System.Windows.Forms.Label lblgiristuru;
     }
 }
 
