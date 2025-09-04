@@ -30,8 +30,8 @@
         {
             System.Windows.Forms.GroupBox groupBox2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.rbBackWard = new System.Windows.Forms.RadioButton();
             this.rbForward = new System.Windows.Forms.RadioButton();
+            this.rbBackWard = new System.Windows.Forms.RadioButton();
             this.lblNhil = new System.Windows.Forms.Label();
             this.lblVAT = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtinclusive = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btclear = new System.Windows.Forms.Button();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,19 +80,6 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Calculation Direction";
             // 
-            // rbBackWard
-            // 
-            this.rbBackWard.AutoSize = true;
-            this.rbBackWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.rbBackWard.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbBackWard.Location = new System.Drawing.Point(6, 66);
-            this.rbBackWard.Name = "rbBackWard";
-            this.rbBackWard.Size = new System.Drawing.Size(215, 17);
-            this.rbBackWard.TabIndex = 2;
-            this.rbBackWard.Text = "From Grand Total to Main Amount";
-            this.rbBackWard.UseVisualStyleBackColor = true;
-            this.rbBackWard.CheckedChanged += new System.EventHandler(this.rbBackWard_CheckedChanged_1);
-            // 
             // rbForward
             // 
             this.rbForward.AutoSize = true;
@@ -106,6 +94,19 @@
             this.rbForward.Text = "From Main Amount to Grand Total";
             this.rbForward.UseVisualStyleBackColor = true;
             this.rbForward.CheckedChanged += new System.EventHandler(this.Rbforward_CheckedChanged);
+            // 
+            // rbBackWard
+            // 
+            this.rbBackWard.AutoSize = true;
+            this.rbBackWard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.rbBackWard.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.rbBackWard.Location = new System.Drawing.Point(6, 66);
+            this.rbBackWard.Name = "rbBackWard";
+            this.rbBackWard.Size = new System.Drawing.Size(215, 17);
+            this.rbBackWard.TabIndex = 2;
+            this.rbBackWard.Text = "From Grand Total to Main Amount";
+            this.rbBackWard.UseVisualStyleBackColor = true;
+            this.rbBackWard.CheckedChanged += new System.EventHandler(this.rbBackWard_CheckedChanged_1);
             // 
             // lblNhil
             // 
@@ -409,6 +410,7 @@
             this.panel1.BackgroundImage = global::NarposTaxCalculator.Properties.Resources.narposres;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btclear);
             this.panel1.Controls.Add(this.lblgiristuru);
             this.panel1.Controls.Add(this.btnCalculate);
             this.panel1.Controls.Add(this.txtinclusive);
@@ -438,6 +440,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1506, 799);
             this.panel1.TabIndex = 49;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btclear
+            // 
+            this.btclear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btclear.BackColor = System.Drawing.Color.SteelBlue;
+            this.btclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btclear.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btclear.ForeColor = System.Drawing.Color.White;
+            this.btclear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btclear.Location = new System.Drawing.Point(955, 331);
+            this.btclear.Name = "btclear";
+            this.btclear.Size = new System.Drawing.Size(90, 23);
+            this.btclear.TabIndex = 52;
+            this.btclear.Text = "CLEAR";
+            this.btclear.UseVisualStyleBackColor = false;
+            this.btclear.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -495,6 +514,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtinclusive;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btclear;
     }
 }
 

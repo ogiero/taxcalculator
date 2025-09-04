@@ -189,5 +189,26 @@ namespace NarposTaxCalculator
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtBaseAmount.Clear();
+            txtTlLevy.Clear();
+            txtCovidLevy.Clear();
+            txtGetFundLevy.Clear();
+            txtGetFundLevy.Clear();
+            txtNhil.Clear();
+            txtamountBeforeVat.Clear();
+            txtVAT.Clear();
+            txtexclusive.Clear();
+            txtinclusive.Clear();
+
+            txtBaseAmount.Focus();
+        }
     }
 }

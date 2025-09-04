@@ -11,4 +11,3 @@ C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalcul
 C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\en\NarposTaxCalculator.resources.dll
 C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.exe
 C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.pdb
-C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.exe.config
