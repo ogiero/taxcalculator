@@ -1,0 +1,14 @@
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\bin\Release\NarposTaxCalculator.exe.config
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\bin\Release\NarposTaxCalculator.exe
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\bin\Release\NarposTaxCalculator.pdb
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\bin\Release\en\NarposTaxCalculator.resources.dll
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.csproj.AssemblyReference.cache
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.Form1.resources
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.Properties.Resources.resources
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.Form1.en.resources
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.csproj.GenerateResource.cache
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.csproj.CoreCompileInputs.cache
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\en\NarposTaxCalculator.resources.dll
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.exe
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.pdb
+C:\Users\XPG\Desktop\narposproje\NarposTaxCalculator\obj\Release\NarposTaxCalculator.exe.config

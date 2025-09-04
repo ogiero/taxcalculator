@@ -72,12 +72,13 @@ namespace NarposTaxCalculator
             decimal Nhil = baseamount * 0.025m;
             decimal amountbeforevat = baseamount + tllevy + getFundLevy + CovidLevy + Nhil;
             decimal VAT = amountbeforevat * 0.15m;
-
+            
             Resultswrite2023(baseamount, tllevy, getFundLevy, CovidLevy, Nhil, amountbeforevat, VAT, totalamount);
+            
         }
         private void Calculateforward2022(decimal baseamount)
         {
-            decimal tllevy = baseamount * 0.01m;
+            decimal  tllevy = baseamount * 0.01m;
             decimal combinedtax = baseamount * 0.06m;
             decimal amountbeforevat = baseamount + tllevy + combinedtax;
             decimal VAT = amountbeforevat * 0.125m;
@@ -94,32 +95,34 @@ namespace NarposTaxCalculator
             decimal amountbeforevat = baseamount + tllevy + combinedtax;
             decimal VAT = amountbeforevat * 0.125m;
             Resultswrite2022(baseamount, tllevy, combinedtax, amountbeforevat, VAT, totalamount);
+            
         }
         private void Resultswrite2023(decimal baseamount, decimal tllevy, decimal getFundLevy, decimal CovidLevy, decimal Nhil, decimal amountbeforevat, decimal VAT, decimal totalamount)
         {
-            txtBaseAmount.Text = baseamount.ToString("N2");
+            
             txtTlLevy.Text = tllevy.ToString("N2");
             txtGetFundLevy.Text = getFundLevy.ToString("N2");
             txtCovidLevy.Text = CovidLevy.ToString("N2");
             txtNhil.Text = Nhil.ToString("N2");
             txtamountBeforeVat.Text = amountbeforevat.ToString("N2");
             txtVAT.Text = VAT.ToString("N2");
-            txtTotalAmount.Text = totalamount.ToString("N2");
+            //txtTotalAmount.Text = totalamount.ToString("N2");
             txtexclusive.Text = baseamount.ToString("N2");
             txtinclusive.Text = totalamount.ToString("N2");
+           
 
 
         }
         private void Resultswrite2022(decimal baseamount, decimal tllevy, decimal combinedtax, decimal amountbeforevat, decimal VAT, decimal totalamount)
         {
-            txtBaseAmount.Text = baseamount.ToString("N2");
+            
             txtTlLevy.Text = tllevy.ToString("N2");
             txtGetFundLevy.Text = combinedtax.ToString("N2");
             txtCovidLevy.Text = "0.00";
             txtNhil.Text = "0.00";
             txtamountBeforeVat.Text = amountbeforevat.ToString("N2");
             txtVAT.Text = VAT.ToString("N2");
-            txtTotalAmount.Text = totalamount.ToString("N2");
+            //txtTotalAmount.Text = totalamount.ToString("N2");
             txtexclusive.Text = baseamount.ToString("N2");
             txtinclusive.Text = totalamount.ToString("N2");
         }
@@ -163,16 +166,28 @@ namespace NarposTaxCalculator
         private void Rbforward_CheckedChanged(object sender, EventArgs e)
         {
             lblgiristuru.Text = "Base Amount (Excluding Taxes)";
-            lblTotalAmount.Visible = true;
-            txtTotalAmount.Visible = true;
+            //lblTotalAmount.Visible = true;
+            //txtTotalAmount.Visible = true;
         }
 
 
         private void rbBackWard_CheckedChanged_1(object sender, EventArgs e)
         {
             lblgiristuru.Text = "Total Amount (Including Taxes)";
-            lblTotalAmount.Visible = false;
-            txtTotalAmount.Visible = false;
+            lblgiristuru.Visible = true;
+            txtBaseAmount.Visible = true;
+            //lblTotalAmount.Visible = false;
+            //txtTotalAmount.Visible = false;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
