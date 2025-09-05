@@ -167,10 +167,11 @@
             // txtCovidLevy
             // 
             this.txtCovidLevy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCovidLevy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCovidLevy.Location = new System.Drawing.Point(570, 445);
             this.txtCovidLevy.Name = "txtCovidLevy";
             this.txtCovidLevy.ReadOnly = true;
-            this.txtCovidLevy.Size = new System.Drawing.Size(102, 20);
+            this.txtCovidLevy.Size = new System.Drawing.Size(102, 23);
             this.txtCovidLevy.TabIndex = 35;
             // 
             // lblGetFund
@@ -190,10 +191,11 @@
             // txtNhil
             // 
             this.txtNhil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNhil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtNhil.Location = new System.Drawing.Point(826, 445);
             this.txtNhil.Name = "txtNhil";
             this.txtNhil.ReadOnly = true;
-            this.txtNhil.Size = new System.Drawing.Size(102, 20);
+            this.txtNhil.Size = new System.Drawing.Size(102, 23);
             this.txtNhil.TabIndex = 36;
             // 
             // label2
@@ -227,45 +229,51 @@
             // txtGetFundLevy
             // 
             this.txtGetFundLevy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtGetFundLevy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtGetFundLevy.Location = new System.Drawing.Point(698, 402);
             this.txtGetFundLevy.Name = "txtGetFundLevy";
             this.txtGetFundLevy.ReadOnly = true;
-            this.txtGetFundLevy.Size = new System.Drawing.Size(100, 20);
+            this.txtGetFundLevy.Size = new System.Drawing.Size(100, 23);
             this.txtGetFundLevy.TabIndex = 34;
             // 
             // txtTlLevy
             // 
             this.txtTlLevy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTlLevy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTlLevy.Location = new System.Drawing.Point(570, 402);
             this.txtTlLevy.Name = "txtTlLevy";
             this.txtTlLevy.ReadOnly = true;
-            this.txtTlLevy.Size = new System.Drawing.Size(100, 20);
+            this.txtTlLevy.Size = new System.Drawing.Size(100, 23);
             this.txtTlLevy.TabIndex = 33;
             // 
             // txtVAT
             // 
             this.txtVAT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtVAT.Location = new System.Drawing.Point(826, 402);
             this.txtVAT.Name = "txtVAT";
             this.txtVAT.ReadOnly = true;
-            this.txtVAT.Size = new System.Drawing.Size(100, 20);
+            this.txtVAT.Size = new System.Drawing.Size(100, 23);
             this.txtVAT.TabIndex = 38;
             // 
             // txtamountBeforeVat
             // 
             this.txtamountBeforeVat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtamountBeforeVat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtamountBeforeVat.Location = new System.Drawing.Point(698, 445);
             this.txtamountBeforeVat.Name = "txtamountBeforeVat";
             this.txtamountBeforeVat.ReadOnly = true;
-            this.txtamountBeforeVat.Size = new System.Drawing.Size(100, 20);
+            this.txtamountBeforeVat.Size = new System.Drawing.Size(100, 23);
             this.txtamountBeforeVat.TabIndex = 37;
             // 
             // txtBaseAmount
             // 
             this.txtBaseAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBaseAmount.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBaseAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBaseAmount.Location = new System.Drawing.Point(651, 334);
             this.txtBaseAmount.Name = "txtBaseAmount";
-            this.txtBaseAmount.Size = new System.Drawing.Size(177, 20);
+            this.txtBaseAmount.Size = new System.Drawing.Size(177, 23);
             this.txtBaseAmount.TabIndex = 32;
             this.txtBaseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBaseAmount_keypress);
             // 
@@ -285,7 +293,7 @@
             // btnCalculate
             // 
             this.btnCalculate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCalculate.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCalculate.BackColor = System.Drawing.Color.OrangeRed;
             this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCalculate.ForeColor = System.Drawing.Color.White;
@@ -373,10 +381,12 @@
             // txtexclusive
             // 
             this.txtexclusive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtexclusive.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtexclusive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtexclusive.Location = new System.Drawing.Point(419, 517);
             this.txtexclusive.Name = "txtexclusive";
             this.txtexclusive.ReadOnly = true;
-            this.txtexclusive.Size = new System.Drawing.Size(265, 20);
+            this.txtexclusive.Size = new System.Drawing.Size(265, 23);
             this.txtexclusive.TabIndex = 41;
             // 
             // label1
@@ -391,15 +401,16 @@
             this.label1.Size = new System.Drawing.Size(366, 25);
             this.label1.TabIndex = 47;
             this.label1.Text = "TAX CALCULATOR APPLİCATİON";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtinclusive
             // 
             this.txtinclusive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtinclusive.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtinclusive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtinclusive.Location = new System.Drawing.Point(816, 517);
             this.txtinclusive.Name = "txtinclusive";
             this.txtinclusive.ReadOnly = true;
-            this.txtinclusive.Size = new System.Drawing.Size(262, 20);
+            this.txtinclusive.Size = new System.Drawing.Size(262, 23);
             this.txtinclusive.TabIndex = 44;
             // 
             // panel1
@@ -434,18 +445,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.panel1.Location = new System.Drawing.Point(7, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1506, 799);
             this.panel1.TabIndex = 49;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btclear
             // 
             this.btclear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btclear.BackColor = System.Drawing.Color.SteelBlue;
+            this.btclear.BackColor = System.Drawing.Color.OrangeRed;
             this.btclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btclear.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btclear.ForeColor = System.Drawing.Color.White;

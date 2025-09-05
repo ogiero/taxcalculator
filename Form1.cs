@@ -57,6 +57,7 @@ namespace NarposTaxCalculator
             decimal amountbeforevat = baseamount + tllevy + getFundLevy + CovidLevy + Nhil;
             decimal VAT = amountbeforevat * 0.15m;
             decimal totalamount = amountbeforevat + VAT;
+
             Resultswrite2023(baseamount,tllevy, getFundLevy, CovidLevy, Nhil, amountbeforevat, VAT, totalamount);
 
 
@@ -106,7 +107,6 @@ namespace NarposTaxCalculator
             txtNhil.Text = Nhil.ToString("N2");
             txtamountBeforeVat.Text = amountbeforevat.ToString("N2");
             txtVAT.Text = VAT.ToString("N2");
-            //txtTotalAmount.Text = totalamount.ToString("N2");
             txtexclusive.Text = baseamount.ToString("N2");
             txtinclusive.Text = totalamount.ToString("N2");
            
@@ -122,7 +122,6 @@ namespace NarposTaxCalculator
             txtNhil.Text = "0.00";
             txtamountBeforeVat.Text = amountbeforevat.ToString("N2");
             txtVAT.Text = VAT.ToString("N2");
-            //txtTotalAmount.Text = totalamount.ToString("N2");
             txtexclusive.Text = baseamount.ToString("N2");
             txtinclusive.Text = totalamount.ToString("N2");
         }
@@ -166,8 +165,7 @@ namespace NarposTaxCalculator
         private void Rbforward_CheckedChanged(object sender, EventArgs e)
         {
             lblgiristuru.Text = "Base Amount (Excluding Taxes)";
-            //lblTotalAmount.Visible = true;
-            //txtTotalAmount.Visible = true;
+           
         }
 
 
@@ -176,23 +174,7 @@ namespace NarposTaxCalculator
             lblgiristuru.Text = "Total Amount (Including Taxes)";
             lblgiristuru.Visible = true;
             txtBaseAmount.Visible = true;
-            //lblTotalAmount.Visible = false;
-            //txtTotalAmount.Visible = false;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
